@@ -2,8 +2,6 @@ from typing import Optional
 from pydantic import BaseModel
 from datetime import date
 
-from sqlalchemy.sql.sqltypes import Numeric
-
 
 class User(BaseModel):
     USUARIO: str
@@ -49,6 +47,18 @@ class ShowBooking(BaseModel):
     FECHA: date
     HORA_INGRESO: str
     ESTADO: str
+
+    class Config:
+        orm_mode = True
+
+
+class MadeBooking(BaseModel):  # Reservas Realizadas
+    NRO_RESERVA: int
+    FECHA: date
+    HORA_INGRESO: str
+    NRO_CLIENTE: int
+    COD_PRODUCTO: int
+    PRECIO_UNIDAD: float
 
     class Config:
         orm_mode = True

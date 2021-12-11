@@ -1,14 +1,5 @@
 from sqlalchemy import Column, Integer, String, Date, Numeric
-from db.conexion import *
-
-
-# class User(Base):
-#     __tablename__ = 'usuario'
-#     id = Column(Integer, primary_key=True, index=True)
-#     username = Column(String(20))
-#     nombre = Column(String(200))
-#     rol = Column(String(20))
-#     estado = Column(Integer)
+from .database import Base
 
 
 class User(Base):
