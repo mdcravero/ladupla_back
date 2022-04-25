@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import pymssql
 
 engine = create_engine(
-    r"mssql+pymssql://{0}:{1}@localhost:1434/LADUPLA?charset=utf8".format('SA', 'Matute246$'))
+    r"mssql+pymssql://{0}:{1}@34.71.215.9:1433/LADUPLA?charset=utf8".format('sqlserver', 'Ladupla2022'))
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

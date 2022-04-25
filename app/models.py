@@ -2,17 +2,34 @@ from sqlalchemy import Column, Integer, String, Date, Numeric
 from .database import Base
 
 
-class User(Base):
-    __tablename__ = 'USUARIOS'
+# class User(Base):
+#     __tablename__ = 'USUARIOS'
 
-    USUARIO = Column("USUARIO", String, primary_key=True)
+#     USUARIO = Column("USUARIO", String, primary_key=True)
+#     NOMBRE = Column("NOMBRE", String)
+#     APELLIDO = Column("APELLIDO", String)
+#     PASSWORD = Column("PASSWORD", String)
+#     FECHA_ALTA = Column("FECHA_ALTA", Date)
+#     FECHA_BAJA = Column("FECHA_BAJA", Date)
+#     EMAIL = Column("EMAIL", String)
+#     ROL = Column("ROL", String)
+
+# En SQLServer la tabla se llama Clientes, pero para en la APP funcionaría como User
+class User(Base):
+    __tablename__ = 'CLIENTES'
+
+    NRO_CLIENTE = Column("NRO_CLIENTE", Integer, primary_key=True)
     NOMBRE = Column("NOMBRE", String)
     APELLIDO = Column("APELLIDO", String)
+    TELEFONO = Column("TELEFONO", String)
     PASSWORD = Column("PASSWORD", String)
-    FECHA_ALTA = Column("FECHA_ALTA", Date)
-    FECHA_BAJA = Column("FECHA_BAJA", Date)
+    CALLE = Column("CALLE", String)
+    NUMERO = Column("NUMERO", Integer)
+    BARRIO = Column("BARRIO", String)
+    CODIGO_POSTAL = Column("CODIGO_POSTAL", String)
+    NUMERO = Column("NUMERO", Integer)
+    DNI = Column("DNI", Integer)
     EMAIL = Column("EMAIL", String)
-    ROL = Column("ROL", String)
 
 
 class Booking(Base):
@@ -43,6 +60,6 @@ class Products(Base):
     ESTADO = Column('ESTADO', String)
     TIPO = Column('TIPO', String)
     PRECIO_UNIDAD = Column('PRECIO_UNIDAD', Numeric)
-    TIPO_OPERACION = Column('TIPO_OPERACION', String)
     MUEVE_STOCK = Column('MUEVE_STOCK', String)
     HABILITADO = Column('HABILITADO', String)
+    STOCK = Column('STOCK', Integer)

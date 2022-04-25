@@ -4,7 +4,6 @@ from datetime import date
 
 
 class User(BaseModel):
-    USUARIO: str
     EMAIL: str
     PASSWORD: str
 
@@ -73,6 +72,13 @@ class CreateBooking(BaseModel):
     ESTADO: str
     NRO_CLIENTE: int
     CANTIDAD: float
+
+    class Config:
+        orm_mode = True
+
+
+class CancelBooking(BaseModel):
+    ESTADO: str
 
     class Config:
         orm_mode = True
