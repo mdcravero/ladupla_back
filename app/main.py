@@ -3,8 +3,7 @@ from fastapi import status, HTTPException
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
-from . import models
-from . import schemas
+from . import models, schemas
 from .database import get_db, engine
 from sqlalchemy.orm import Session
 from fastapi.params import Depends
