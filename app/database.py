@@ -9,7 +9,7 @@ import pymssql
 # DEFINE THE DATABASE CREDENTIALS
 user = 'sqlserver'
 password = 'Ladupla2022'
-host = '10.133.0.3'
+host = '34.71.215.9'
 port = 1433
 database = 'LADUPLA'
 
