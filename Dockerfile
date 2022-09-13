@@ -8,6 +8,7 @@ ENV DB_PASS: 'cervantes'
 ENV DB_NAME: 'ladupla'
 ENV DB_HOST: '172.21.192.3'
 ENV DB_PORT: 1433
+ENV PORT: 8080
 #
 COPY ./requirements.txt /code/requirements.txt
 
