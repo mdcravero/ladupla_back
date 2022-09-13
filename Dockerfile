@@ -3,7 +3,11 @@ FROM python:3.9
 
 # 
 WORKDIR /code
-ENV DB_HOST="sql-server"
+ENV DB_USER: 'sqlserver'
+ENV DB_PASS: 'cervantes'
+ENV DB_NAME: 'ladupla'
+ENV DB_HOST: '172.21.192.3'
+ENV DB_PORT: 1433
 #
 COPY ./requirements.txt /code/requirements.txt
 

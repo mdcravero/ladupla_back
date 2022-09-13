@@ -5,11 +5,11 @@ import pymssql
 import os
 
 # DEFINE THE DATABASE CREDENTIALS
-user = 'sa'
-password = 'PXY8ZqgbGHL65Z'
+user = os.getenv("DB_USER")
+password = os.getenv("DB_PASS")
 host = os.getenv("DB_HOST")
-port = 1433
-database = 'LADUPLA'
+port = os.getenv("DB_PORT")
+database = os.getenv("DB_NAME")
 
 engine = create_engine(
     url="mssql+pymssql://{0}:{1}@{2}:{3}/{4}".format(
