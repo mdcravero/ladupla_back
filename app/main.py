@@ -18,7 +18,7 @@ app = FastAPI(title='test FastAPI',
 
 origins = [
     # "http://localhost",
-    "http://localhost:8080",
+    "https://ladupla.netlify.app/",
     # "http://localhost:8000",
     # "http://172.18.0.4:8080",
     '*'
